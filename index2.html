@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .slider {
+      width: 300px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <img class="active" src="img/korea.jpg" alt="Image 1">
+    <img src="img/hawaii.jpg" alt="Image 2">
+    <img src="img/korea.jpg" alt="Image 3">
+    <img src="mg/korea.jpg" alt="Image 4">
+  </div>
+
+  <script>
+    var sliderImages = document.querySelectorAll('.slider img');
+    var currentImage = 0;
+
+    function nextImage() {
+      sliderImages[currentImage].classList.remove('active');
+      currentImage = (currentImage + 1) % sliderImages.length;
+      sliderImages[currentImage].classList.add('active');
+    }
+
+    setInterval(nextImage, 3000); // Change image every 3 seconds
+  </script>
+</body>
+</html>

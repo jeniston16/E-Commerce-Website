@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>trediki</title>
+	<!--csslink-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!--cdn-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--icons-->
+<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+	<!--navbar1-->
+	
+	
+	<div class="top-navigation">
+        <ul>
+            <li><a href="#">TRACK ORDERS</a></li>
+            <li><a href="#">STORE</a></li>
+            <li><a href="#">CONTACT PAGE</a></li>
+        </ul>
+    </div>
+
+	
+	<!--navbar1 end-->
+	<!--navbar2-->
+	<header>
+		<a href="index1.html" class="logo"><img src="img/logo.png"></a>
+		<ul class="navbar">
+			<li class="dropdown">
+			<a href="product.html">MEN'S T-SHIRTS</a>
+			<ul class="dropdown_list">
+			<li><a href="#">SOLID TEES</a></li>
+	<li><a href="#">GRAPHIC TEES</a></li>
+	<li><a href="#">OVERSIZED TEE</a></li>
+			</ul>
+</li>
+			<li><a href="#">MEN'S HOODIES</a></li>
+			<li><a href="#">MEN'S JACKETS</a></li> 
+			<li><a href="#">MEN'S LONG-SLEEVE T-SHIRTS</a></li>
+		</ul>
+		
+		
+			
+			<form class="search-form" action="/search" method="GET">
+				<input type="text" name="query" placeholder="Search...">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			  </form>
+			  <div class="nav-icon">
+		<a href="#"><i class='bx bx-heart' ></i></a>
+		<a href="#"><i class='bx bx-cart' ></i></a>
+		<a href="product.html"><i class='bx bx-user' ></i></i></a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+	</div>
+	</div>
+	</header>
+    <!--account page-->
+    
+	<div class="hero">
+    <div class="containeracc">
+		<div class="formbox">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+				<button type="button" class="toggle-btn" onclick="register()">Register</button>
+
+			</div>
+			<div class="social-icon">
+				<img src="img/fb.png">
+				<img src="img/google.png">
+				<img src="img/tw.png">
+			</div>
+			<form id="login" class="input-group">
+				<input type="text" class="input-field" placeholder="User Id" required>
+				<input type="text" class="input-field" placeholder="Enter Password" required>
+				<input type="checkbox" class="chec-kbox"><span>Remember Password</span>
+				<button type="submit" class="submit-btn">Log in</button>
+			</form>
+			<form id="register" class="input-group">
+				<input type="text" class="input-field" placeholder="User Id" required>
+				<input type="email" class="input-field" placeholder="Email Id" required>
+				<input type="text" class="input-field" placeholder="Enter Password" required>
+				<input type="checkbox" class="chec-kbox"><span>I agree to the terms & conditions</span>
+				<button type="submit" class="submit-btn">Register</button>
+			</form>
+
+		</div>
+		
+	</div>
+    </div>
+<script>
+	var x = document.getElementById("login")
+	var y = document.getElementById("register")
+	var z = document.getElementById("btn")
+	function register(){
+		x.style.left = "-400px";
+		y.style.left = "50px";
+		z.style.left = "110px";
+	}
+	function login(){
+		x.style.left = "50px";
+		y.style.left = "450px";
+		z.style.left = "0";
+	}
+</script>
+    <!--footer-->
+	<footer class="footer">
+<div class="container">
+	<div class="row">
+		
+		<div class="footer-col">
+			
+			<img src="img/logo.png">
+			</div>
+			<div class="footer-col">
+				<h3>NEED HELP</h3>
+				<p>contact Us</p>
+				<p>Track Order</p>
+				<p>Returns & Refunds</p>
+				<p>FAQs</p>
+				<p>My Account</p>
+	
+			</div>
+			<div class="footer-col">
+				<h3>QUICK LINKS</h3>
+				<ul>
+				<li><a href="#">Mens's Tshirts</a></li>
+				<li><a href="#">Men's Hoodies</a></li>
+				<li><a href="#">Men's Jactes</a></li>
+				<li><a href="#">Men's Long Sleeve T-shirt</a></li>
+			</ul>
+			</div>
+			<div class="footer-col">
+				<h3>FOLLOW US</h3>
+				<div class="sociallinks">
+					<a href="#"><i class='bx bxl-facebook-circle'></i></a>
+						<a href="#"><i class='bx bxl-twitter' ></i></a>
+				<a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+				
+				</div>
+			</div>
+			
+	</div>
+</div>
+</footer>
+</body>
+</html>
+	

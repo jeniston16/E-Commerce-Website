@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>trediki</title>
+	<!--csslink-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!--cdn-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--icons-->
+<link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<!--owl_carosel cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<!--navbar1-->
+	
+	
+	<div class="top-navigation">
+        <ul>
+            <li><a href="#">TRACK ORDERS</a></li>
+            <li><a href="#">STORE</a></li>
+            <li><a href="#">CONTACT PAGE</a></li>
+        </ul>
+    </div>
+
+	
+	<!--navbar1 end-->
+	<!--navbar2-->
+	<header>
+		<a href="index1.html" class="logo"><img src="img/logo.png"></a>
+		<ul class="navbar">
+			<li class="dropdown">
+			<a href="product.html">MEN'S T-SHIRTS</a>
+			<ul class="dropdown_list">
+			<li><a href="#">SOLID TEES</a></li>
+	<li><a href="#">GRAPHIC TEES</a></li>
+	<li><a href="#">OVERSIZED TEE</a></li>
+			</ul>
+</li>
+			<li><a href="#">MEN'S HOODIES</a></li>
+			<li><a href="#">MEN'S JACKETS</a></li> 
+			<li><a href="#">MEN'S LONG-SLEEVE T-SHIRTS</a></li>
+		</ul>
+		
+		
+			
+			<form class="search-form" action="/search" method="GET">
+				<input type="text" name="query" placeholder="Search...">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			  </form>
+			  <div class="nav-icon">
+		<a href="#"><i class='bx bx-heart'></i></a>
+		<a href="#"><i class='bx bx-cart'></i></a>
+		<a href="loginpage.html"><i class='bx bx-user'></i></i></a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+	</div>
+	</div>
+	</header>
+	<!--navbar2 end-->
+	
+	<!--<div class="banner">
+	<div class="slider">
+		<img class="active" src="img/korea.jpg" alt="Image 1">
+		<img src="img/hawaii.jpg" alt="Image 2">
+		<img src="img/korea.jpg" alt="Image 3">
+		<img src="img/hawaii.jpg" alt="Image 4">
+	  </div>
+	
+	  <script>
+		var sliderImages = document.querySelectorAll('.slider img');
+		var currentImage = 0;
+	
+		function nextImage() {
+		  sliderImages[currentImage].classList.remove('active');
+		  currentImage = (currentImage + 1) % sliderImages.length;
+		  sliderImages[currentImage].classList.add('active');
+		}
+	
+		setInterval(nextImage, 3000); // Change image every 3 seconds
+	  </script>
+	  </div>-->
+	  <!--image slider-->
+	  <div class="banner">
+		
+	<div class="slideshow-container">
+	
+	<div class="mySlides fade">
+	  <div class="numbertext">1 / 3</div>
+	  <img src="img/hawaii.jpg" style="width:100%">
+	  <div class="text">Caption Text</div>
+	</div>
+	
+	<div class="mySlides fade">
+	  <div class="numbertext">2 / 3</div>
+	  <img src="img/korea.jpg" style="width:100%">
+	  <div class="text">Caption Two</div>
+	</div>
+	
+	<div class="mySlides fade">
+	  <div class="numbertext">3 / 3</div>
+	  <img src="img/hawaii.jpg" style="width:100%">
+	  <div class="text">Caption Three</div>
+	</div>
+	
+	<a class="prev" onclick="plusSlides(-1)">❮</a>
+	<a class="next" onclick="plusSlides(1)">❯</a>
+	
+	</div>
+	<br>
+	
+	
+	
+	<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+	
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+	
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+	
+	function showSlides(n) {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
+	
+	</div>
+	  
+	  <!--image slider end-->
+	  <!--content on image-->
+	  <!--<div class="heading">
+		<h1> DESIGN YOUR DREAM HOME</h1>
+		<p>The design project allows to develop an interior design and see what the find result will be</p>
+	  
+	  
+	  <div class="button">
+		<button>Explore</button>
+		
+		
+		</div>
+		</div>-->
+
+		<!--owl_carousel-->
+		<section id="owl_carousel">
+			<div class="about">
+			  <h2>COLLECTIONS</h2>
+			</div>
+			<div class="main_1">
+			  <div class="center_carousel">
+		  <div class="owl-carousel owl-theme">
+			<div class="item">
+			  <img src="img/img1.jpg">
+			</div>
+			<div class="item">
+			  <img src="img/img1.jpg">
+			</div>
+			<div class="item">
+			  <img src="img/img1.jpg">
+			</div>
+			<div class="item">
+			  <img src="img/img1.jpg">
+			</div>
+			<div class="item">
+			  <img src="img/img1.jpg">
+			</div>
+			<div class="item">
+			  <img src="img/img1.jpg">
+			</div>
+		   
+		</div>
+		</div>
+		</div>
+		
+			
+		</section>
+		
+	<!--colllecton-->
+	<section id="features">
+		<div class="about">
+		<h2>COLLECTIONS</h2>
+	</div> 
+	<div class="main">
+		<div class="center">
+	<div class="gallery">
+		<div class="gallery-item1">
+		  <img src="img/img1.jpg" alt="Image 1">
+		</div>
+		<div class="gallery-item2">
+		  <img src="img/img2.jpg" alt="Image 2">
+		</div>
+		<div class="gallery-item3">
+		  <img src="img/img3.jpg" alt="Image 3">
+		</div>
+		<div class="gallery-item1_4">
+		  <img src="img/img4.jpg" alt="Image 4">
+		</div>
+		<div class="gallery-item1_4">
+			<img src="img/img1.jpg" alt="Image 4">
+		  </div>
+		  <div class="gallery-item1_4">
+			<img src="img/img2.jpg" alt="Image 4">
+		  </div>
+		  <div class="gallery-item1_4">
+			<img src="img/img3.jpg" alt="Image 4">
+		  </div>
+		  <div class="gallerycol3">
+			<img src="img/img4.jpg" alt="Image 4">
+		  </div>
+		  <div class="gallerycol3">
+			<img src="img/img1.jpg" alt="Image 4">
+		  </div>
+		  <div class="gallerycol3-1">
+			<img src="img/img2.jpg" alt="Image 4">
+		  </div>
+		  <div class="gallery-item1_4">
+			<img src="img/img3.jpg" alt="Image 4">
+		  </div>
+		  <div class="gallery-item1_4">
+			  <img src="img/img4.jpg" alt="Image 4">
+			</div>
+			<div class="gallery-item1_4">
+			  <img src="img/img1.jpg" alt="Image 4">
+			</div>
+			<div class="gallery-item1_4">
+			  <img src="img/img2.jpg" alt="Image 4">
+			</div>
+	  </div>
+	</div>
+	</div>
+</section>
+<!--colllecton end-->
+
+
+<section id="owl_carousel">
+    <div class="about">
+      <h2>COLLECTIONS</h2>
+    </div>
+    <div class="main_1">
+      <div class="center_carousel">
+  <div class="owl-carousel owl-theme">
+    <div class="item">
+      <img src="img/img1.jpg">
+    </div>
+    <div class="item">
+      <img src="img/img1.jpg">
+    </div>
+    <div class="item">
+      <img src="img/img1.jpg">
+    </div>
+    <div class="item">
+      <img src="img/img1.jpg">
+    </div>
+    <div class="item">
+      <img src="img/img1.jpg">
+    </div>
+    <div class="item">
+      <img src="img/img1.jpg">
+    </div>
+   
+</div>
+</div>
+</div>
+
+	
+</section>
+
+	<!--footer-->
+	<footer class="footer">
+<div class="container">
+	<div class="row">
+		
+		<div class="footer-col">
+			
+			<img src="img/logo.png">
+			</div>
+			<div class="footer-col">
+				<h3>NEED HELP</h3>
+				<p>contact Us</p>
+				<p>Track Order</p>
+				<p>Returns & Refunds</p>
+				<p>FAQs</p>
+				<p>My Account</p>
+	
+			</div>
+			<div class="footer-col">
+				<h3>QUICK LINKS</h3>
+				<ul>
+				<li><a href="#">Mens's Tshirts</a></li>
+				<li><a href="#">Men's Hoodies</a></li>
+				<li><a href="#">Men's Jactes</a></li>
+				<li><a href="#">Men's Long Sleeve T-shirt</a></li>
+			</ul>
+			</div>
+			<div class="footer-col">
+				<h3>FOLLOW US</h3>
+				<div class="sociallinks">
+					<a href="#"><i class='bx bxl-facebook-circle'></i></a>
+						<a href="#"><i class='bx bxl-twitter'></i></a>
+				<a href="#"><i class='bx bxl-instagram-alt'></i></a>
+				
+				</div>
+			</div>
+			
+	</div>
+</div>
+</footer>
+	<!--footer end-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" 
+	integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" 
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <!--custom js file link-->
+ 
+ <script type="text/javascript">
+
+	$('.owl-carousel').owlCarousel({
+	  loop:true,
+	  margin:10,
+	  nav:true,
+	  autoplay:true,
+	  autoplayTimeout:2000,
+	  dots:false,
+	  responsive:{
+		  0:{
+			  items:1
+		  },
+		  600:{
+			  items:3
+		  },
+		  1000:{
+			  items:3
+		  }
+	  }
+	})
+	
+	</script>
+</body>
+</html>
